@@ -1,5 +1,75 @@
+/*****RESET*****/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+/********UTILITY*******/
+.row {
+  width: 100%;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.viewport {
+  height: calc(100vh - 90px);
+  background-color: rgb(20, 25, 34);
+  width: 100%;
+}
+
+/********COLONNA SPOTIFY********/
+.spotify-colonna {
+  background-color: black;
+  height: calc(100vh - 90px);
+  width: 15%;
+}
+
+.logo {
+  width: 150px;
+}
+
+/********PLAYBAR********/
+
+/********HEADER********/
+.header-bar {
+  background-color: rgb(8, 11, 18);
+  position: fixed;
+  z-index: 1;
+  opacity: 0.5;
+  height: 80px;
+  width: 100%;
+}
+
+
+/********MAIN********/
+
+/********ALBUM********/
+
+/********BARRA DI NAVIGAZIONE********/
