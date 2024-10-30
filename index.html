@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--FONTAWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-----GOOGLE FONT----->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,21 +28,87 @@
     <main>
       <!-----SPOTIFY-COLONNA---->
       <aside>
-        <div class="top"></div>
-        <div class="bottom"></div>
+        <div class="top">
+          <div class="spotify-logo">
+            <img src="./spotify/img/logo.svg" alt="Logo">
+          </div>
+          <div class="mobile-spotify">
+            <img src="" alt="">
+          </div>
+
+          <!---MENU--->
+
+          <nav class="spotify-menu">
+            <ul>
+              <li><img class="icons-col" src="./spotify/img/home.svg" alt="home">Home</li>
+              <li><img class="icons-col" src="./spotify/img/search.svg" alt="search">Cerca</li>
+              <li><img class="icons-col" src="./spotify/img/libreria.svg" alt="libreria">La tua libreria</li>
+            </ul>
+
+            <!---PLAYLIST--->
+
+            <section class="playlist">
+              <h3>Playlist</h3>
+              <div class="plus-button">
+                <a href="#">
+                  <div class="box"><i class="fa-solid fa-square-plus"></i></div><span>Crea Playlist</span>
+                </a>
+              </div>
+              <ul>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+              </ul>
+            </section>
+        </div>
+
+        <!---ACCOUNT---->
+
+        <div class="bottom">
+          <div class="installa-app">
+            <span>Installa app</span>
+          </div>
+          <div class="account">
+            <span>Kevin Garri</span>
+          </div>
+        </div>
       </aside>
 
       <!------ALBUM------>
       <div class="album-box">
-        <div class="cta"></div>
+
+        <!----UPGRADE-BAR---->
+        <div class="cta">
+          <div class="button"><a href="#">Effettua l'upgrade</a></div>
+        </div>
+
         <div class="inner">
         </div>
       </div>
     </main>
 
-    <!------FOOTER------>
-    <Footer>
-      <!----PLAYBAR---->
+    <!----PLAYBAR---->
+
+    <footer class="playbar d-flex">
+      <div class="playing d-flex">
+        <div class="sinister">
+          <img src="./spotify/img/sinister.jpeg" alt="playing">
+        </div>
+        <div class="info">
+          <h5>Sinister</h5>
+          <span>Brano Nome</span>
+        </div>
+        <div class="actions">
+          <a href="#"><i class="fa-regular fa-heart"></i></a>
+          <a href="#"><i class="fa-regular fa-folder"></i></a>
+        </div>
+      </div>
+    </footer>
+
 
     </Footer>
   </div>

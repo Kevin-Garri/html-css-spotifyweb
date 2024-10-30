@@ -36,7 +36,22 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  color: white;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
 
 /********MAIN********/
 
@@ -67,6 +82,17 @@ aside .bottom {
   background-color: black;
 }
 
+.icons-col {
+  width: 20px;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.spotify-logo
 /********ALBUM********/
 
 .album-box {
@@ -85,11 +111,52 @@ aside .bottom {
   width: 100%;
 }
 
+
 /********BARRA DI NAVIGAZIONE********/
 
 
 /********PLAYBAR********/
-footer {
+.playbar {
   height: 90px;
   background-color: rgb(40, 40, 40);
+  padding: 20px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playing {
+  flex-basis: calc(100% / 3);
+  justify-content: start;
+  align-items: center;
+}
+
+.actions {
+  padding-left: 25px;
+}
+
+.info {
+  padding-left: 10px;
+}
+
+.playing .sinister {
+  width: 40px;
+  cursor: pointer;
+}
+
+.playing .info span {
+  font-size: 12px;
+}
+
+.playing .actions h5 {
+  cursor: pointer;
+}
+
+.playing .info span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.playing .actions a {
+  margin: 5px;
 }
