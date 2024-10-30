@@ -38,27 +38,45 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.viewport {
+/********MAIN********/
+
+.main-wrapper {
+  height: 100vh;
+  background-color: green;
+}
+
+main {
   height: calc(100vh - 90px);
   background-color: rgb(20, 25, 34);
-  width: 100%;
+  display: flex;
 }
 
 /********COLONNA SPOTIFY********/
-.spotify-colonna {
+aside {
+  width: 230px;
+  background-color: brown;
+}
+
+aside .top {
   background-color: black;
-  height: calc(100vh - 90px);
-  width: 15%;
+  height: calc(100% - 80px);
 }
 
-.logo {
-  width: 150px;
+aside .bottom {
+  height: 80px;
+  background-color: black;
 }
 
-/********PLAYBAR********/
+/********ALBUM********/
 
-/********HEADER********/
-.header-bar {
+.album-box {
+  width: calc(100% - 230px);
+  background-color: rgb(20, 25, 34);
+  overflow: auto;
+}
+
+/********UPGRADE-BAR********/
+.cta {
   background-color: rgb(8, 11, 18);
   position: fixed;
   z-index: 1;
@@ -67,9 +85,11 @@ body {
   width: 100%;
 }
 
-
-/********MAIN********/
-
-/********ALBUM********/
-
 /********BARRA DI NAVIGAZIONE********/
+
+
+/********PLAYBAR********/
+footer {
+  height: 90px;
+  background-color: rgb(40, 40, 40);
+}
