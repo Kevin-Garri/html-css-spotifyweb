@@ -169,14 +169,39 @@ aside .bottom {
   padding-top: 10px;
 }
 
+.suggestions {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
 .suggestions h2 {
   color: white;
+  padding-bottom: 10px;
 }
 
 .suggestions span {
   color: gray;
 }
 
+.popular-artists {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.popular-artists h2 {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.popular-artists span {
+  color: gray;
+}
+
+.border img {
+  border-radius: 50%;
+}
 
 
 /********UPGRADE-BAR********/
@@ -228,10 +253,10 @@ aside .bottom {
   color: white;
   justify-content: space-between;
   align-items: center;
+  flex-basis: calc(100% / 3);
 }
 
 .playing {
-  flex-basis: calc(100% / 3);
   justify-content: start;
   align-items: center;
 }
@@ -264,4 +289,56 @@ aside .bottom {
 
 .playing .actions a {
   margin: 5px;
+}
+
+/********MUSIC********/
+
+.music {
+  width: 50vw;
+  max-width: 430px;
+}
+
+.music .music-buttons {
+  justify-content: center;
+  padding-top: 5px;
+  gap: 20px;
+}
+
+.music .musicbar {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.music .music-bar {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  height: 5px;
+  background-color: gray;
+  margin: 0 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.music .music-bar .tempo-passato {
+  width: 25%;
+  height: 5px;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  border-radius: 30px;
+}
+
+.tempo span {
+  font-size: 12px;
+}
+
+.end-song span {
+  font-size: 12px;
+}
+
+/********VOLUME********/
+.volume i {
+  padding: 0 8px;
 }
