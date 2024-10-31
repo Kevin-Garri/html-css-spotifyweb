@@ -27,7 +27,7 @@
   <div class="main-wrapper">
     <main>
       <!-----SPOTIFY-COLONNA---->
-      <aside>
+      <aside class="sidebar-wrapper">
         <div class="top">
           <div class="spotify-logo">
             <img src="./spotify/img/logo.svg" alt="Logo">
@@ -38,32 +38,48 @@
 
           <!---MENU--->
 
-          <nav class="spotify-menu">
-            <ul>
-              <li><img class="icons-col" src="./spotify/img/home.svg" alt="home">Home</li>
-              <li><img class="icons-col" src="./spotify/img/search.svg" alt="search">Cerca</li>
-              <li><img class="icons-col" src="./spotify/img/libreria.svg" alt="libreria">La tua libreria</li>
-            </ul>
-
-            <!---PLAYLIST--->
-
-            <section class="playlist">
-              <h3>Playlist</h3>
-              <div class="plus-button">
-                <a href="#">
-                  <div class="box"><i class="fa-solid fa-square-plus"></i></div><span>Crea Playlist</span>
+          <nav class="spotify-menu d-flex">
+            <ul class="d-flex">
+              <li>
+                <a class="light" href="#">
+                  <img class="icons-col" src="./spotify/img/home.svg">
+                  <span>Home</span>
                 </a>
-              </div>
-              <ul>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-              </ul>
-            </section>
+              </li>
+              <li>
+                <a class="light" href="#">
+                  <img class="icons-col" src="./spotify/img/search.svg">
+                  <span>Cerca</span>
+                </a>
+              </li>
+              <li>
+                <a class="light" href="#">
+                  <img class="icons-col" src="./spotify/img/libreria.svg">
+                  <span>La tua Libreria</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!---PLAYLIST--->
+
+          <section class="playlist">
+            <h3>Playlist</h3>
+            <div class="plus-button">
+              <a href="#">
+                <div class="box"><i class="fa-solid fa-square-plus"></i></div><span>Crea Playlist</span>
+              </a>
+            </div>
+            <ul>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+              <li><a href="#">Nome Playlist</a></li>
+            </ul>
+          </section>
         </div>
 
         <!---ACCOUNT---->
@@ -86,7 +102,86 @@
           <div class="button"><a href="#">Effettua l'upgrade</a></div>
         </div>
 
-        <div class="inner">
+        <div class="album-container">
+
+          <!--------NAVBAR------->
+          <nav class="nav-menu d-flex">
+            <ul class="d-flex">
+              <li><a class="light" href="#">IN EVIDENZA</a></li>
+              <li><a href="#">PODCAST</a></li>
+              <li><a href="#">CLASSIFICHE</a></li>
+              <li><a href="#">GENERI E MOOD</a></li>
+              <li><a href="#">NUOVE USCITE</a></li>
+              <li><a href="#">SCOPRI</a></li>
+            </ul>
+          </nav>
+
+          <!----RECENTLY PLAYED----->
+          <div class="inner">
+            <div class="recently-played">
+              <h2>Recently Played</h2>
+            </div>
+
+            <div class="card-container d-flex">
+
+              <!----HEAVY METAL---->
+              <div class="card">
+                <img src="./spotify/img/metal_lifting.jpg" alt="heavy-metal">
+                <h4 class="album-title">Heavy Metal</h4>
+                <span class="subtitle">Subtitle</span>
+              </div>
+              <!----STRANGER THINGS---->
+              <div class="card">
+                <img src="./spotify/img/stranger.jpeg" alt="stranger-things">
+                <h4 class="album-title">Stranger things, vol. 1 (a Netflix Original Series Soundtrack)</h4>
+                <span class="subtitle">Kyle Dixon & Michael Stein</span>
+              </div>
+              <!----A QUIET PLACE---->
+              <div class="card">
+                <img src="./spotify/img/aquietplace.jpeg" alt="a quiet place">
+                <h4 class="album-title">A quiet place</h4>
+                <span class="subtitle">Subtitle</span>
+              </div>
+              <!----SPLIT---->
+              <div class="card">
+                <img src="./spotify/img/split.jpeg" alt="split">
+                <h4 class="album-title">Split</h4>
+                <span class="subtitle">Subtitle</span>
+              </div>
+              <!----A CURE FOR WELLNES---->
+              <div class="card">
+                <img src="./spotify/img/cure.jpeg" alt="a cure for wellness">
+                <h4 class="album-title">A cure for wellness</h4>
+                <span class="subtitle">Subtitle</span>
+              </div>
+              <!----SINISTER---->
+              <div class="card">
+                <img src="./spotify/img/sinister.jpeg" alt="sinister">
+                <h4 class="album-title">Sinister</h4>
+                <span class="subtitle">Subtitle</span>
+              </div>
+            </div>
+
+            <!----Creato per John Doe---->
+            <div class="suggestions">
+              <h2>Creato per Kevin Garri</h2>
+              <span>Più ascolti, più accurati saranno i suggerimenti.</span>
+            </div>
+            <div class="suggestions-album d-flex">
+              <!----RADAR---->
+              <div class="card debug">
+                <img src="./spotify/img/radar.jpeg">
+                <h4 class="album-title">Release Radar</h4>
+              </div>
+              <!---DAILY-MIX-->
+              <div class="card debug">
+                <img src="./spotify/img/mixdaily.jpeg">
+                <h4 class="album-title">Daily Mix 1</h4>
+
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </main>

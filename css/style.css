@@ -36,7 +36,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: white;
 }
 
 a {
@@ -58,6 +57,7 @@ ul {
 .main-wrapper {
   height: 100vh;
   background-color: green;
+  justify-content: flex-start;
 }
 
 main {
@@ -66,7 +66,13 @@ main {
   display: flex;
 }
 
+
 /********COLONNA SPOTIFY********/
+
+.sidebar-wrapper {
+  overflow: hidden;
+}
+
 aside {
   width: 230px;
   background-color: brown;
@@ -75,25 +81,60 @@ aside {
 aside .top {
   background-color: black;
   height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 aside .bottom {
   height: 80px;
   background-color: black;
+  color: white;
+}
+
+.spotify-logo {
+  width: 115px;
+}
+
+.spotify-logo:hover {
+  cursor: pointer;
 }
 
 .icons-col {
-  width: 20px;
+  width: 18px;
 }
 
 .playlist {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  color: white;
 }
 
-.spotify-logo
+
+.spotify-menu {
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.spotify-menu ul {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+  margin: 10px;
+}
+
+.spotify-menu ul li a {
+  position: relative;
+  height: 25px;
+}
+
+
 /********ALBUM********/
+
+.debug {
+  border: 1px solid white;
+}
 
 .album-box {
   width: calc(100% - 230px);
@@ -101,19 +142,83 @@ aside .bottom {
   overflow: auto;
 }
 
-/********UPGRADE-BAR********/
-.cta {
-  background-color: rgb(8, 11, 18);
-  position: fixed;
-  z-index: 1;
-  opacity: 0.5;
-  height: 80px;
-  width: 100%;
+.album-box .recently-played {
+  padding: 40px 10px;
+  color: white;
+}
+
+.card {
+  width: calc(100% / 6);
+  padding: 10px;
+  cursor: pointer;
 }
 
 
-/********BARRA DI NAVIGAZIONE********/
+.album-title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
 
+.subtitle {
+  color: gray;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.suggestions h2 {
+  color: white;
+}
+
+.suggestions span {
+  color: gray;
+}
+
+
+
+/********UPGRADE-BAR********/
+.cta {
+  background-color: rgb(8, 11, 18);
+  position: sticky;
+  z-index: 2;
+  opacity: 0.5;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 20px;
+}
+
+.button {
+  position: absolute;
+  right: 10px;
+  text-decoration: none;
+  border: 1.5px solid white;
+  border-radius: 30px;
+  padding: 8px 40px;
+  font-size: 15px;
+  top: 22px;
+}
+
+/********BARRA DI NAVIGAZIONE********/
+.album-box .album-container {
+  padding: 20px;
+}
+
+.album-box .nav-menu ul {
+  width: 100%;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-menu li a {
+  color: gray;
+  font-weight: bold;
+}
 
 /********PLAYBAR********/
 .playbar {
