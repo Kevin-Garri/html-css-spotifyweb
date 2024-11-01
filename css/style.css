@@ -84,6 +84,7 @@ aside .top {
   display: flex;
   flex-direction: column;
   justify-content: start;
+
 }
 
 aside .bottom {
@@ -93,8 +94,18 @@ aside .bottom {
 }
 
 .spotify-logo {
-  width: 115px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 10px;
 }
+
+.spotify-logo img {
+  width: 120px;
+  height: 70px;
+}
+
 
 .spotify-logo:hover {
   cursor: pointer;
@@ -127,6 +138,73 @@ aside .bottom {
 .spotify-menu ul li a {
   position: relative;
   height: 25px;
+}
+
+.playlist ul li a {
+  display: flex;
+  padding: 5px;
+  color: gray;
+}
+
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.plus-button a {
+  color: gray;
+  font-size: 30px;
+  padding-left: 5px;
+}
+
+.box span {
+  color: gray;
+  padding: 5px;
+  font-size: 15px;
+}
+
+/******ACCOUNT*****/
+.bottom {
+  vertical-align: middle;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.bottom .account {
+  padding: 10px 0;
+}
+
+.account img {
+  margin-right: 5px;
+  height: 10px;
+}
+
+.bottom .account img {
+  margin: 5px 5px 0 0;
+  height: 30px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.bottom .installa-app {
+  padding: 5px 0;
+  color: gray;
+}
+
+.bottom .installa-app img {
+  height: 20px;
+  margin-right: 5px;
+  color: gray;
+}
+
+.installa-app {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 
@@ -228,6 +306,7 @@ aside .bottom {
   top: 22px;
 }
 
+
 /********BARRA DI NAVIGAZIONE********/
 .album-box .album-container {
   padding: 20px;
@@ -291,6 +370,10 @@ aside .bottom {
   margin: 5px;
 }
 
+.music-buttons i {
+  cursor: pointer;
+}
+
 /********MUSIC********/
 
 .music {
@@ -346,6 +429,7 @@ aside .bottom {
 
 .volume i {
   padding: 0 8px;
+  font-size: 12px;
 }
 
 .volume .volume-bar {
