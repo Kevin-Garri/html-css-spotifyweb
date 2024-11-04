@@ -6,6 +6,10 @@
 }
 
 /********UTILITY*******/
+.debug {
+  border: 1px solid white;
+}
+
 .row {
   width: 100%;
 }
@@ -66,6 +70,30 @@ main {
   display: flex;
 }
 
+a:hover {
+  color: white;
+}
+
+.actions i:hover {
+  color: white;
+}
+
+.nome-playlist li a:hover {
+  color: white;
+}
+
+.installa-app span:hover {
+  color: white;
+}
+
+.nav-menu li a:hover {
+  color: white;
+}
+
+.fy-mobile-logo {
+  display: none;
+}
+
 
 /********COLONNA SPOTIFY********/
 
@@ -112,7 +140,7 @@ aside .bottom {
 }
 
 .icons-col {
-  width: 18px;
+  width: 25px;
 }
 
 .playlist {
@@ -129,44 +157,70 @@ aside .bottom {
 }
 
 .spotify-menu ul {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80px;
+  height: 90px;
   margin: 10px;
 }
 
-.spotify-menu ul li a {
-  position: relative;
+
+.spotify-menu ul li a.active::before {
+  content: '';
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 2px;
   height: 25px;
+  background-color: greenyellow;
 }
 
 .playlist ul li a {
   display: flex;
-  padding: 5px;
+  padding: 8px;
   color: gray;
+}
+
+.nome-playlist {
+  padding-top: 10px;
+}
+
+.light {
+  display: flex;
+  align-items: center;
+  color: grey;
+}
+
+.light span {
+  font-size: 15px;
 }
 
 
 .box {
   display: flex;
   align-items: center;
+  padding-top: 5px;
 }
 
 .plus-button a {
+  display: block;
   color: gray;
-  font-size: 30px;
+  font-size: 35px;
   padding-left: 5px;
+  height: 33px;
 }
 
 .box span {
   color: gray;
   padding: 5px;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 /******ACCOUNT*****/
 .bottom {
   vertical-align: middle;
+  padding-left: 10px;
 }
 
 .account {
@@ -196,7 +250,7 @@ aside .bottom {
 }
 
 .bottom .installa-app img {
-  height: 20px;
+  height: 15px;
   margin-right: 5px;
   color: gray;
 }
@@ -210,9 +264,6 @@ aside .bottom {
 
 /********ALBUM********/
 
-.debug {
-  border: 1px solid white;
-}
 
 .album-box {
   width: calc(100% - 230px);
@@ -229,6 +280,10 @@ aside .bottom {
   width: calc(100% / 6);
   padding: 10px;
   cursor: pointer;
+}
+
+.card:hover .overlay-album {
+  display: flex;
 }
 
 
@@ -281,12 +336,40 @@ aside .bottom {
   border-radius: 50%;
 }
 
+.img-container {
+  width: 100%;
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-album {
+  /* di default nascondo l'overlay*/
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.icon-dim {
+  font-size: 50px;
+  color: white;
+}
 
 /********UPGRADE-BAR********/
 .cta {
   background-color: rgb(8, 11, 18);
   position: sticky;
-  z-index: 2;
   opacity: 0.5;
   height: 80px;
   display: flex;
@@ -301,11 +384,15 @@ aside .bottom {
   text-decoration: none;
   border: 1.5px solid white;
   border-radius: 30px;
-  padding: 8px 40px;
+  padding: 8px 35px;
   font-size: 15px;
   top: 22px;
 }
 
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 /********BARRA DI NAVIGAZIONE********/
 .album-box .album-container {
@@ -324,6 +411,7 @@ aside .bottom {
   font-weight: bold;
 }
 
+
 /********PLAYBAR********/
 .playbar {
   height: 90px;
@@ -333,6 +421,10 @@ aside .bottom {
   justify-content: space-between;
   align-items: center;
   flex-basis: calc(100% / 3);
+}
+
+.actions i {
+  color: gray;
 }
 
 .playing {
@@ -434,7 +526,7 @@ aside .bottom {
 
 .volume .volume-bar {
   position: relative;
-  width: 120px;
+  width: 80px;
   height: 5px;
   background-color: gray;
   border-radius: 30px;
@@ -453,4 +545,69 @@ aside .bottom {
   left: 0;
   width: 30%;
   border-radius: 30px;
+}
+
+.card-container {
+  flex-wrap: wrap;
+}
+
+/*******MEDIA-QUERY*******/
+
+/******1100*****/
+@media screen and (max-width:1100px) {
+  .card {
+    width: calc(100% / 4);
+  }
+}
+
+/******700*****/
+@media screen and (max-width:700px) {
+  .card {
+    width: calc(100% / 2);
+  }
+}
+
+/******600*****/
+@media screen and (max-width:600px) {
+  .album-box {
+    width: 100%;
+  }
+
+  .card {
+    width: calc(100% / 2);
+  }
+
+  aside {
+    width: 50px;
+  }
+
+  content {
+    width: calc(100% - 50px);
+  }
+
+  .playlist {
+    display: none;
+  }
+
+  .installa-app span {
+    display: none;
+  }
+
+  .installa-app {
+    display: flex;
+    justify-content: center;
+  }
+
+  .account span {
+    display: none;
+  }
+
+  .spotify-menu span {
+    display: none;
+  }
+
+  .spotify-logo {
+    width: 140px;
+    padding: 5px;
+  }
 }
